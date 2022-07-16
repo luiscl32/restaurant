@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:restaurant_app/bloc/cubits/login/login_cubit.dart';
 import 'package:restaurant_app/modules/auth/login/view/login_view.dart';
 
 class LoginPage extends StatelessWidget {
@@ -6,6 +8,9 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(body: LoginView());
+    return BlocProvider(
+      create: (context) => LoginCubit(),
+      child: Scaffold(body: LoginView()),
+    );
   }
 }
