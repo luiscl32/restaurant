@@ -18,7 +18,7 @@ class RestaurantCard extends StatelessWidget {
     final TextTheme theme = Theme.of(context).textTheme;
 
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
+      margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       child: InkWell(
           onTap: () {
             //* todo
@@ -27,11 +27,16 @@ class RestaurantCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Icon(Icons.lunch_dining_rounded),
+              Icon(
+                Icons.lunch_dining_rounded,
+                color: AppTheme.primary,
+              ),
               const SizedBox(
-                height: 10,
+                width: 10,
               ),
               Column(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     name,

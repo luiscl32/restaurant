@@ -56,7 +56,7 @@ class RegisterForm extends StatelessWidget {
                 inputValue: formValues,
                 validator: validateUser,
                 labelText: 'ingresa tu contraseña',
-                prefixIcon: Icons.person,
+                prefixIcon: Icons.lock,
               ),
               const SizedBox(
                 height: 16,

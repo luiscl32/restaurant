@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:restaurant_app/modules/auth/login/view/login_page.dart';
-import 'package:restaurant_app/modules/auth/register/view/register_page.dart';
+import 'package:restaurant_app/router/screens.dart';
 
 class Routes {
   static const String login = '/login';
@@ -11,6 +10,7 @@ class Routes {
     return {
       login: (BuildContext context) => const LoginPage(),
       register: (BuildContext context) => const RegisterPage(),
+      dashboard: (BuildContext context) => const RestaurantPage(),
     };
   }
 }

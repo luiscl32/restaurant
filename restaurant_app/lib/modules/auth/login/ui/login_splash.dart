@@ -10,7 +10,7 @@ class LoginSplash extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     void onNavigate() {
-      Navigator.pushNamed(context, Routes.login);
+      Navigator.pushNamed(context, Routes.dashboard);
     }
 
     return Column(
@@ -29,7 +29,7 @@ class LoginSplash extends StatelessWidget {
         Center(
           child: Text(
             'Bienvenido',
-            style: Theme.of(context).textTheme.headline1,
+            style: Theme.of(context).textTheme.headline3,
           ),
         ),
         const SizedBox(

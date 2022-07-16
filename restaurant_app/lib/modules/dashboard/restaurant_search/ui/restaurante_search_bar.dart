@@ -6,6 +6,7 @@ class RestaurantSearchBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       width: double.infinity,
       height: 48,
       decoration: BoxDecoration(

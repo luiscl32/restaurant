@@ -7,16 +7,14 @@ class RestaurantView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Flexible(
-      child: Column(
-        children: [
-          const RestaurantSearchBar(),
-          const SizedBox(
-            height: 16,
-          ),
-          RestaurantList()
-        ],
-      ),
+    return Column(
+      children: [
+        const RestaurantSearchBar(),
+        const SizedBox(
+          height: 16,
+        ),
+        Flexible(child: RestaurantList())
+      ],
     );
   }
 }

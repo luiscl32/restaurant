@@ -10,7 +10,7 @@ class RestaurantList extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       shrinkWrap: true,
-      physics: BouncingScrollPhysics(),
+      physics: const BouncingScrollPhysics(),
       controller: controller,
       itemCount: listIds.length,
       itemBuilder: (context, index) => RestaurantCard(
