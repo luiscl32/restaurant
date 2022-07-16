@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'restaurant searcher',
       theme: AppTheme.light,
       routes: Routes().getRoutes(),
