@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:restaurant_app/router/routes.dart';
-import 'package:restaurant_app/theme/app_theme.dart';
+
 import 'package:restaurant_app/widgets/widgets.dart';
 
-class LoginForm extends StatelessWidget {
-  const LoginForm({Key? key}) : super(key: key);
+class RegisterForm extends StatelessWidget {
+  const RegisterForm({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,23 +12,14 @@ class LoginForm extends StatelessWidget {
         'https://img.freepik.com/premium-vector/food-search-logo-design-template_145155-1044.jpg';
 
     Map<String, String> formValues = {
-      'username': '',
-      'password': '',
+      'email': '',
     };
 
     String? validateUser(String? value) {
       if (value!.isEmpty) return 'ingrese un usuario';
     }
 
-    String? validatePassword(String? value) {
-      if (value!.isEmpty) return 'ingrese su contraseña';
-    }
-
     void onNavigate() {
-      Navigator.pushNamed(context, Routes.register);
-    }
-
-    void onRegister() {
       Navigator.pushNamed(context, Routes.register);
     }
 
@@ -48,22 +39,11 @@ class LoginForm extends StatelessWidget {
             height: 16,
           ),
           CustomInputField(
-            inputProperty: 'username',
+            inputProperty: 'email',
             inputValue: formValues,
             validator: validateUser,
-            labelText: 'usuario',
+            labelText: 'ingresa tu usuario',
             prefixIcon: Icons.person,
-          ),
-          const SizedBox(
-            height: 16,
-          ),
-          CustomInputField(
-            inputProperty: 'password',
-            inputValue: formValues,
-            validator: validatePassword,
-            labelText: 'contraseña',
-            obscureText: true,
-            prefixIcon: Icons.lock,
           ),
           const SizedBox(
             height: 16,
@@ -72,16 +52,6 @@ class LoginForm extends StatelessWidget {
             onPress: onNavigate,
             buttonText: 'continuar',
           ),
-          const SizedBox(
-            height: 16,
-          ),
-          SizedBox(
-            width: double.infinity,
-            child: OutlinedButton(
-              onPressed: onRegister,
-              child: const Text('Registro'),
-            ),
-          )
         ],
       )),
     );
